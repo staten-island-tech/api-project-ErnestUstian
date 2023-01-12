@@ -1,0 +1,76 @@
+html, 
+body,
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    background-color: var(--primary);
+}
+#Menupage{
+    display: flex;
+    width: 90vw;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+img{
+    width: 90%;
+    align-items: center;
+    height: 30rem;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    padding: 10px;
+}
+h2{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+.BTN{
+    width: 12%;
+    font-size: 25px;
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.Buttons {
+    display: flex;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    border: 3px solid black;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: var(--secondary);
+}
+.WarmCool{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.Colors{
+    width: 12%;
+    font-size: 25px;
+    color: black;
+    margin: 10px;
+}
+.warm{
+    --primary: #AC1717;
+    --secondary: #8A1212;
+}
+.cool{
+    --primary: #17acac;
+    --secondary:#1DD9D9;
+}
