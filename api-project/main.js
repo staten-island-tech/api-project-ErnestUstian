@@ -10,28 +10,24 @@ DOM.MainMenu.addEventListener("click", function(){
     display(food)
 })
 DOM.Georgian.addEventListener("click", function(){
-    food.filter((food) => food.nationality.includes("georgian"))
-    display(food)
+    const filtered = food.filter((food) => food.status === ("Alive"))
+    display(filtered)
 })
 DOM.Armenian.addEventListener("click", function(){
-    food.filter((food) => food.nationality.includes("armenian"))
-    display(food)
+    const filtered = food.filter((food) => (food.status === ("Dead")) || (food.status === ("unknown")))
+    display(filtered)
 })
 DOM.Khachapuri.addEventListener("click", function(){
-    food.filter((food) => food.type.includes("khachapuri"))
-    display(food)
+    const filtered = food.filter((food) => food.gender === ("Male"))
+    display(filtered)
 })
 DOM.food.addEventListener("click", function(){
-    food.filter((food) => food.group.includes("food"))
-    display(food)
+    const filtered = food.filter((food) => food.gender === ("Female"))
+    display(filtered)
 })
 DOM.sweet.addEventListener("click", function(){
-    food.filter((food) => food.group.includes("sweet"))
-    display(food)
-})
-DOM.drink.addEventListener("click", function(){
-    food.filter((food) => food.group.includes("drink"))
-    display(food)
+    const filtered = food.filter((food) => food.gender === ("unknown"))
+    display(filtered)
 })
 
 DOM.Warm.addEventListener("click", function(){
