@@ -1,16 +1,12 @@
-
-async function getData() {
-    const response = await fetch("https://rickandmortyapi.com/api/character")
-    const data = await response.json()
-    const food = data.results
-    return food
-}
-
-food = getData()
-
 import {DOM} from "./DOM";
 
-display(food)
+fetch("https://rickandmortyapi.com/api/character").then(response => {
+    response.json().then(data => {
+        food = data.results
+        display(food)
+    })
+})
+
 
 DOM.MainMenu.addEventListener("click", function(){
     display(food)
