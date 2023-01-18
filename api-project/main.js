@@ -1,7 +1,12 @@
-const response = await fetch("https://rickandmortyapi.com/api/character")
-const data = await response.json()
-const food = data.results
 
+async function getData() {
+    const response = await fetch("https://rickandmortyapi.com/api/character")
+    const data = await response.json()
+    const food = data.results
+    return food
+}
+
+food = getData()
 
 import {DOM} from "./DOM";
 
@@ -47,7 +52,7 @@ function display(food) {
     <div class="card">
         <h1>${food.name}</h1>
         <h2>${food.status}</h2>
-        <img src="${food.image}" alt="${food.name}">
+        <img src="${food.image}" alt="image of ${food.name}">
     </div>
     `))
 }
