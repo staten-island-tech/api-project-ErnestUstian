@@ -43,9 +43,9 @@ DOM.Warm.addEventListener("click", function () {
   }
 });
 
-function display(food) {
+function display(foods) {
   DOM.Menupage.innerHTML = "";
-  food.forEach((food) =>
+  foods.forEach((food) =>
     DOM.Menupage.insertAdjacentHTML(
       "beforeend",
       `
